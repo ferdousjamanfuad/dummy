@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace E_Commerce_Application
+namespace BakeryShopManagementSystem
 {
     internal static class Program
     {

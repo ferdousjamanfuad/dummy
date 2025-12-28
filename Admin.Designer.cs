@@ -1,4 +1,4 @@
-﻿namespace E_Commerce_Application
+﻿namespace BakeryShopManagementSystem
 {
     partial class Admin
     {
@@ -35,7 +35,7 @@
             // 
             this.btnexitadmin.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnexitadmin.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexitadmin.Location = new System.Drawing.Point(749, 1);
+            this.btnexitadmin.Location = new System.Drawing.Point(859, 2);
             this.btnexitadmin.Name = "btnexitadmin";
             this.btnexitadmin.Size = new System.Drawing.Size(81, 31);
             this.btnexitadmin.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 569);
+            this.ClientSize = new System.Drawing.Size(942, 507);
             this.Controls.Add(this.btnexitadmin);
             this.Font = new System.Drawing.Font("Yu Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.InfoText;

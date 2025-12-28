@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace E_Commerce_Application
+namespace BakeryShopManagementSystem
 {
-    public partial class Employee : Form
+    public partial class Cashier : Form
     {
-        public Employee()
+        public Cashier()
         {
             InitializeComponent();
         }

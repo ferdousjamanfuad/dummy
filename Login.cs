@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace E_Commerce_Application
+namespace BakeryShopManagementSystem
 {
     public partial class Login : Form
     {
@@ -43,17 +43,23 @@ namespace E_Commerce_Application
                 Admin admin = new Admin();
                 admin.Show();
             }
-            else if (txturname.Text == "employee" && txtpass.Text == "employee")
+            else if (txturname.Text == "cashier" && txtpass.Text == "cashier")
             {
                 this.Hide();
-                Employee employee = new Employee();
-                employee.Show();
+                Cashier cashier = new Cashier();
+                cashier.Show();
             }
-            else if (txturname.Text == "user" && txtpass.Text == "user")
+            else if (txturname.Text == "pm" && txtpass.Text == "pm")
             {
                 this.Hide();
-                User user = new User();
-                user.Show();
+                ProductionManager pm = new ProductionManager();
+                pm.Show();
+            }
+            else if (txturname.Text == "im" && txtpass.Text == "im")
+            {
+                this.Hide();
+                InventoryManager im = new InventoryManager();
+                im.Show();
             }
             else
             {

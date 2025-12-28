@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BakeryShopManagementSystem;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,14 +11,14 @@ using System.Windows.Forms;
 
 namespace BakeryShopManagementSystem
 {
-    public partial class Registration : Form
+    public partial class InventoryManager : Form
     {
-        public Registration()
+        public InventoryManager()
         {
             InitializeComponent();
         }
 
-        private void btnexitreg_Click(object sender, EventArgs e)
+        private void btnexitim_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();

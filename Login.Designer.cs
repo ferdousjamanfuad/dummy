@@ -1,4 +1,4 @@
-﻿namespace E_Commerce_Application
+﻿namespace BakeryShopManagementSystem
 {
     partial class Login
     {
@@ -33,15 +33,16 @@
             this.lblpass = new System.Windows.Forms.Label();
             this.txturname = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
-            this.lblstore = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.linklblreg = new System.Windows.Forms.LinkLabel();
             this.btnlgn = new System.Windows.Forms.Button();
             this.btnclr = new System.Windows.Forms.Button();
             this.lblerrorpass = new System.Windows.Forms.Label();
             this.lblerrorurname = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linklblreg = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             this.lblurname.AutoSize = true;
             this.lblurname.BackColor = System.Drawing.Color.Transparent;
             this.lblurname.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblurname.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblurname.ForeColor = System.Drawing.Color.DarkGray;
             this.lblurname.Location = new System.Drawing.Point(32, 224);
             this.lblurname.Name = "lblurname";
             this.lblurname.Size = new System.Drawing.Size(101, 25);
@@ -62,7 +63,7 @@
             this.lblpass.AutoSize = true;
             this.lblpass.BackColor = System.Drawing.Color.Transparent;
             this.lblpass.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpass.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblpass.ForeColor = System.Drawing.Color.DarkGray;
             this.lblpass.Location = new System.Drawing.Point(33, 276);
             this.lblpass.Name = "lblpass";
             this.lblpass.Size = new System.Drawing.Size(100, 25);
@@ -83,35 +84,48 @@
             this.txtpass.Size = new System.Drawing.Size(227, 20);
             this.txtpass.TabIndex = 3;
             // 
-            // lblstore
-            // 
-            this.lblstore.AutoSize = true;
-            this.lblstore.BackColor = System.Drawing.Color.Transparent;
-            this.lblstore.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblstore.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lblstore.Location = new System.Drawing.Point(9, 6);
-            this.lblstore.Name = "lblstore";
-            this.lblstore.Size = new System.Drawing.Size(132, 28);
-            this.lblstore.TabIndex = 4;
-            this.lblstore.Text = "NEOSTORE";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.linklblreg);
             this.panel1.Controls.Add(this.btnlgn);
             this.panel1.Controls.Add(this.btnclr);
             this.panel1.Controls.Add(this.lblerrorpass);
             this.panel1.Controls.Add(this.lblerrorurname);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txtpass);
             this.panel1.Controls.Add(this.txturname);
             this.panel1.Controls.Add(this.lblurname);
             this.panel1.Controls.Add(this.lblpass);
             this.panel1.Location = new System.Drawing.Point(41, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(410, 435);
+            this.panel1.Size = new System.Drawing.Size(380, 435);
             this.panel1.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(139, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(206, 183);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
+            // linklblreg
+            // 
+            this.linklblreg.ActiveLinkColor = System.Drawing.Color.Transparent;
+            this.linklblreg.AutoSize = true;
+            this.linklblreg.BackColor = System.Drawing.Color.Transparent;
+            this.linklblreg.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linklblreg.LinkColor = System.Drawing.SystemColors.ButtonShadow;
+            this.linklblreg.Location = new System.Drawing.Point(187, 317);
+            this.linklblreg.Name = "linklblreg";
+            this.linklblreg.Size = new System.Drawing.Size(125, 14);
+            this.linklblreg.TabIndex = 9;
+            this.linklblreg.TabStop = true;
+            this.linklblreg.Text = "Don\'t Have An Account?";
+            this.linklblreg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblreg_LinkClicked);
             // 
             // btnlgn
             // 
@@ -162,36 +176,21 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(124, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(427, 175);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(267, 192);
+            this.pictureBox1.Size = new System.Drawing.Size(306, 284);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // linklblreg
-            // 
-            this.linklblreg.ActiveLinkColor = System.Drawing.Color.Purple;
-            this.linklblreg.AutoSize = true;
-            this.linklblreg.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linklblreg.LinkColor = System.Drawing.Color.White;
-            this.linklblreg.Location = new System.Drawing.Point(186, 316);
-            this.linklblreg.Name = "linklblreg";
-            this.linklblreg.Size = new System.Drawing.Size(125, 14);
-            this.linklblreg.TabIndex = 9;
-            this.linklblreg.TabStop = true;
-            this.linklblreg.Text = "Don\'t Have An Account?";
-            this.linklblreg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblreg_LinkClicked);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(866, 560);
+            this.BackColor = System.Drawing.Color.Ivory;
+            this.ClientSize = new System.Drawing.Size(743, 505);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblstore);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -199,9 +198,9 @@
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -211,7 +210,6 @@
         private System.Windows.Forms.Label lblpass;
         private System.Windows.Forms.TextBox txturname;
         private System.Windows.Forms.TextBox txtpass;
-        private System.Windows.Forms.Label lblstore;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblerrorurname;
@@ -219,5 +217,6 @@
         private System.Windows.Forms.Button btnlgn;
         private System.Windows.Forms.Button btnclr;
         private System.Windows.Forms.LinkLabel linklblreg;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

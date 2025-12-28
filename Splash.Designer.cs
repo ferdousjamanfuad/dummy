@@ -1,4 +1,4 @@
-﻿namespace E_Commerce_Application
+﻿namespace BakeryShopManagementSystem
 {
     partial class splash
     {
@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(splash));
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblstore = new System.Windows.Forms.Label();
+            this.lblwelcome = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblload = new System.Windows.Forms.Label();
             this.lblpercentage = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             // progressBar
             // 
             this.progressBar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.progressBar.ForeColor = System.Drawing.Color.Green;
+            this.progressBar.ForeColor = System.Drawing.Color.LightYellow;
             this.progressBar.Location = new System.Drawing.Point(12, 368);
             this.progressBar.Margin = new System.Windows.Forms.Padding(2);
             this.progressBar.Name = "progressBar";
@@ -60,16 +60,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // lblstore
+            // lblwelcome
             // 
-            this.lblstore.AutoSize = true;
-            this.lblstore.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblstore.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lblstore.Location = new System.Drawing.Point(278, 9);
-            this.lblstore.Name = "lblstore";
-            this.lblstore.Size = new System.Drawing.Size(105, 22);
-            this.lblstore.TabIndex = 2;
-            this.lblstore.Text = "NEOSTORE";
+            this.lblwelcome.AutoSize = true;
+            this.lblwelcome.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblwelcome.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.lblwelcome.Location = new System.Drawing.Point(246, 9);
+            this.lblwelcome.Name = "lblwelcome";
+            this.lblwelcome.Size = new System.Drawing.Size(178, 22);
+            this.lblwelcome.TabIndex = 2;
+            this.lblwelcome.Text = "Welcome to the store";
             // 
             // timer1
             // 
@@ -105,7 +105,7 @@
             this.ClientSize = new System.Drawing.Size(690, 389);
             this.Controls.Add(this.lblpercentage);
             this.Controls.Add(this.lblload);
-            this.Controls.Add(this.lblstore);
+            this.Controls.Add(this.lblwelcome);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.progressBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -124,7 +124,7 @@
 
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblstore;
+        private System.Windows.Forms.Label lblwelcome;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblload;
         private System.Windows.Forms.Label lblpercentage;

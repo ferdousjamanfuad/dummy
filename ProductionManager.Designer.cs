@@ -1,6 +1,6 @@
-﻿namespace E_Commerce_Application
+﻿namespace BakeryShopManagementSystem
 {
-    partial class User
+    partial class ProductionManager
     {
         /// <summary>
         /// Required designer variable.
@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnexituser = new System.Windows.Forms.Button();
+            this.btnexitpm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnexituser
+            // btnexitpm
             // 
-            this.btnexituser.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnexituser.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexituser.Location = new System.Drawing.Point(746, 1);
-            this.btnexituser.Name = "btnexituser";
-            this.btnexituser.Size = new System.Drawing.Size(81, 31);
-            this.btnexituser.TabIndex = 2;
-            this.btnexituser.Text = "Exit";
-            this.btnexituser.UseVisualStyleBackColor = false;
-            this.btnexituser.Click += new System.EventHandler(this.btnexituser_Click);
+            this.btnexitpm.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnexitpm.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnexitpm.Location = new System.Drawing.Point(854, 2);
+            this.btnexitpm.Name = "btnexitpm";
+            this.btnexitpm.Size = new System.Drawing.Size(81, 31);
+            this.btnexitpm.TabIndex = 1;
+            this.btnexitpm.Text = "Exit";
+            this.btnexitpm.UseVisualStyleBackColor = false;
+            this.btnexitpm.Click += new System.EventHandler(this.btnexitpm_Click);
             // 
-            // User
+            // ProductionManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 528);
-            this.Controls.Add(this.btnexituser);
+            this.ClientSize = new System.Drawing.Size(937, 508);
+            this.Controls.Add(this.btnexitpm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "User";
+            this.Name = "ProductionManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "User";
+            this.Text = "ProductionManager";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnexituser;
+        private System.Windows.Forms.Button btnexitpm;
     }
 }

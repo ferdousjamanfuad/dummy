@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BakeryShopManagementSystem;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,16 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace E_Commerce_Application
+namespace BakeryShopManagementSystem
 {
-    public partial class User : Form
+    public partial class ProductionManager : Form
     {
-        public User()
+        public ProductionManager()
         {
             InitializeComponent();
         }
 
-        private void btnexituser_Click(object sender, EventArgs e)
+        private void btnexitpm_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.Show();
