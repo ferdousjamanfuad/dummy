@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BakeryManagementSystem;
+using MySql.Data.MySqlClient;
 
 namespace BakeryShopManagementSystem
 {
@@ -46,7 +48,7 @@ namespace BakeryShopManagementSystem
             else
                 lblregerroraddress.Visible = false;
 
-            if(cmbregrole.Text== "")
+            if (cmbregrole.Text == "")
                 lblregerrorrole.Visible = true;
             else
                 lblregerrorrole.Visible = false;
@@ -55,16 +57,59 @@ namespace BakeryShopManagementSystem
                 lblregerrorgender.Visible = true;
             else lblregerrorgender.Visible = false;
 
+            if (lblregerrorurname.Visible || lblregerrorpass.Visible || lblregerroremail.Visible || lblregerroraddress.Visible || lblregerrorrole.Visible || lblregerrorgender.Visible)
+                return;
 
-            if (!lblregerrorurname.Visible && !lblregerrorpass.Visible && !lblregerroremail.Visible &&
-                   !lblregerroraddress.Visible && !lblregerrorrole.Visible && !lblregerrorgender.Visible)
+
+            string username = txtregurname.Text.Trim();
+            string email = txtregemail.Text.Trim();
+            string password = txtregpass.Text.Trim();
+            string role = cmbregrole.Text;
+            string address = txtregaddress.Text.Trim();
+            string gender = rbreggenderM.Checked ? "Male" : "Female";
+           // string dob = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            int isApproved = 0;
+
+
+
+            try
             {
-                this.Close();
-                Login login = new Login();
-                login.Show();
-            }
-        }
+                string query = $"INSERT INTO users (username, email, password,gender, role, address, is_approved) " +
+                 $"VALUES ('{username}','{email}','{password}','{gender}','{role}','{address}',{isApproved})";
 
+
+                bool success = DatabaseHelper.Execute(query);
+                if (success)
+                {
+                    MessageBox.Show(
+                    "Registration successful \n Please wait for admin approval",
+                    "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Close();
+                    Login login = new Login();
+                    login.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Registration failed");
+                }
+            }
+            catch (Exception ex)
+            {
+                {
+                    MessageBox.Show("Error:" + ex.Message);
+                }
+
+            }
+
+                if (!lblregerrorurname.Visible && !lblregerrorpass.Visible && !lblregerroremail.Visible &&
+                       !lblregerroraddress.Visible && !lblregerrorrole.Visible && !lblregerrorgender.Visible)
+                {
+                    this.Close();
+                    Login login = new Login();
+                    login.Show();
+                }
+        }
         private void Registration_Load(object sender, EventArgs e)
         {
             lblregerrorurname.Visible = false;
